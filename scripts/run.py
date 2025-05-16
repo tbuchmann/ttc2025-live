@@ -56,7 +56,7 @@ def benchmark(conf):
             set_working_directory("solutions", tool)
             os.environ['Tool'] = tool
             for scenario in conf.Models:
-                os.environ['Scenario'] = scenario.Name
+                os.environ['Model'] = scenario.Name
                 os.environ['Sequences'] = '0'
                 full_model_path = os.path.abspath(os.path.join(BASE_DIRECTORY, "models", scenario.Name, scenario.Name + ".uvl"))
                 for i in range(1, conf.MaxVersions):

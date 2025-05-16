@@ -13,7 +13,7 @@ namespace NMFSolution.Benchmark
     {
         private ModelRepository repository;
 
-        private string Scenario;
+        private string Model;
         private string ModelPath;
         private string RunIndex;
         private int Sequences;
@@ -41,7 +41,7 @@ namespace NMFSolution.Benchmark
         private void Load()
         {
             _stopwatch.Restart();
-            _solution.Load(ModelPath!, Scenario!);
+            _solution.Load(ModelPath!, Model!);
             _stopwatch.Stop();
             Report(BenchmarkPhase.Load);
         }
@@ -55,7 +55,7 @@ namespace NMFSolution.Benchmark
             RunIndex = Environment.GetEnvironmentVariable(nameof(RunIndex));
             Sequences = int.Parse(Environment.GetEnvironmentVariable(nameof(Sequences)));
             Tool = Environment.GetEnvironmentVariable(nameof(Tool));
-            Scenario = Environment.GetEnvironmentVariable(nameof(Scenario));
+            Model = Environment.GetEnvironmentVariable(nameof(Model));
 
             _solution.Initialize();
 
@@ -66,12 +66,12 @@ namespace NMFSolution.Benchmark
         private void Initial(bool sequenced)
         {
             MakeSureModelPathExists();
-            var dotPath = Path.Combine(ModelPath, "..", "results", $"{Scenario}_{Tool}.dot");
+            var dotPath = Path.Combine(ModelPath, "..", "results", $"{Model}_{Tool}.dot");
             _stopwatch.Restart();
-            var result = _solution.Initial(ModelPath, Scenario, dotPath);
+            var result = _solution.Initial(ModelPath, Model, dotPath);
             _stopwatch.Stop();
             Report(BenchmarkPhase.Initial, null);
-            var path = Path.Combine(ModelPath, "..", "results", $"{Scenario}_{Tool}.xmi");
+            var path = Path.Combine(ModelPath, "..", "results", $"{Model}_{Tool}.xmi");
             if (result != null)
             {
                 using (var target = File.Create(path))
@@ -92,16 +92,16 @@ namespace NMFSolution.Benchmark
 
         private void Update(int iteration)
         {
-            var updatedPath = Path.GetFullPath(Path.Combine(ModelPath, "..", $"{Scenario}_{iteration:00}.uvl"));
-            var dotPath = Path.Combine(ModelPath, "..", "results", $"{Scenario}_{iteration:00}_{Tool}.dot");
-            var actualActions = _solution.ComputeChanges(updatedPath, Scenario, iteration, dotPath);
+            var updatedPath = Path.GetFullPath(Path.Combine(ModelPath, "..", $"{Model}_{iteration:00}.uvl"));
+            var dotPath = Path.Combine(ModelPath, "..", "results", $"{Model}_{iteration:00}_{Tool}.dot");
+            var actualActions = _solution.ComputeChanges(updatedPath, Model, iteration, dotPath);
             _stopwatch.Restart();
             var result = actualActions();
             _stopwatch.Stop();
             Report(BenchmarkPhase.Update, iteration);
             if (result != null)
             {
-                using (var target = File.Create(Path.Combine(ModelPath, "results", $"{Scenario}_{iteration:00}_{Tool}.xmi")))
+                using (var target = File.Create(Path.Combine(ModelPath, "results", $"{Model}_{iteration:00}_{Tool}.xmi")))
                 {
                     repository.Serializer.Serialize(result, target);
                 }
@@ -110,8 +110,8 @@ namespace NMFSolution.Benchmark
 
         private void Report(BenchmarkPhase phase, int? iteration = null)
         {
-            Console.WriteLine($"{Tool};{Scenario};{RunIndex};{iteration ?? 0};{phase};Time;{_stopwatch.Elapsed.Ticks * 100}");
-            Console.WriteLine($"{Tool};{Scenario};{RunIndex};{iteration ?? 0};{phase};Memory;{Environment.WorkingSet}");
+            Console.WriteLine($"{Tool};{Model};{RunIndex};{iteration ?? 0};{phase};Time;{_stopwatch.Elapsed.Ticks * 100}");
+            Console.WriteLine($"{Tool};{Model};{RunIndex};{iteration ?? 0};{phase};Memory;{Environment.WorkingSet}");
         }
     }
 }
