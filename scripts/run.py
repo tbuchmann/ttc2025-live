@@ -55,24 +55,23 @@ def benchmark(conf):
             config.read(os.path.join(BASE_DIRECTORY, "solutions", tool, "solution.ini"))
             set_working_directory("solutions", tool)
             os.environ['Tool'] = tool
-            for scenario in conf.Scenarios:
+            for scenario in conf.Models:
                 os.environ['Scenario'] = scenario.Name
-                for change_set in scenario.Models:
-                    for i in range(1, conf.Sequences + 1):
-                        if os.path.exists(os.path.join(BASE_DIRECTORY, "models", scenario.Name, change_set, "change" + str(i).zfill(2) + ".txt")):
-                            os.environ['Sequences'] = str(i)
-                    full_change_path = os.path.abspath(os.path.join(BASE_DIRECTORY, "models", scenario.Name, change_set))
-                    os.environ['Model'] = change_set
-                    os.environ['ModelPath'] = full_change_path
-                    print("Running benchmark: tool = " + tool + ", scenario = " + scenario.Name + ", model = " + change_set)
-                    try:
-                        output = subprocess.check_output(config.get('run', 'default'), shell=True)
-                        with open(result_file, "ab") as file:
-                            file.write(output)
-                            output = subprocess.check_output("dotnet ../Reference/bin/netcoreapp3.1/NMFSolution.dll check")
-                            file.write(output)
-                    except CalledProcessError as e:
-                        print("Program exited with error" + repr(e))
+                os.environ['Sequences'] = '0'
+                full_model_path = os.path.abspath(os.path.join(BASE_DIRECTORY, "models", scenario.Name, scenario.Name + ".uvl"))
+                for i in range(1, conf.MaxVersions):
+                    if os.path.exists(os.path.join(BASE_DIRECTORY, "models", scenario.Name, scenario.Name + "_" + str(i).zfill(2) + ".uvl")):
+                        os.environ['Sequences'] = str(i)
+                        full_model_path = os.path.abspath(os.path.join(BASE_DIRECTORY, "models", scenario.Name, scenario.Name + "_01.uvl"))
+                os.environ['ModelPath'] = full_model_path
+                os.environ['ModelDirectory'] = os.path.abspath(os.path.join(BASE_DIRECTORY, "models", scenario.Name))
+                print("Running benchmark: tool = " + tool + ", model = " + scenario.Name)
+                try:
+                    output = subprocess.check_output(config.get('run', 'default'), shell=True)
+                    with open(result_file, "ab") as file:
+                        file.write(output)
+                except CalledProcessError as e:
+                    print("Program exited with error" + repr(e))
 
 def clean_dir(*path):
     dir = os.path.join(BASE_DIRECTORY, *path)

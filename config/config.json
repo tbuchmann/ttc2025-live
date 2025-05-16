@@ -1,40 +1,91 @@
 {
-  "Tools": ["Reference", "NMF"],
-  "Scenarios": [
+  "Tools": ["NMF"],
+  "Models": [
   {
-	"Name": "scale_samples",
-	"Models": [
-	  "1",
-	  "2",
-	  "4",
-	  "8",
-	  "16",
-	  "32"
+	"Name": "automotive01",
+	"Versions": [
+	  "automotive01"
 	]
   },
   {
-    "Name": "scale_assay",
-	"Models": [
-	  "1",
-	  "2",
-	  "4",
-	  "8",
-	  "16",
-	  "32"
+    "Name": "automotive02",
+	"Versions": [
+	  "automotive02_01",
+	  "automotive02_02",
+	  "automotive02_03",
+	  "automotive02_04"
 	]
   },
   {
-    "Name": "new_samples",
-	"Models": [
-	  "1",
-	  "2",
-	  "4",
-	  "8",
-	  "16",
-	  "32"
+    "Name": "berkeleydb",
+	"Versions": [
+	  "berkeleydb"
+	]
+  },
+  {
+    "Name": "busybox",
+	"Versions": [
+	  "busybox_01",
+	  "busybox_02",
+	  "busybox_03",
+	  "busybox_04",
+	  "busybox_05",
+	  "busybox_06",
+	  "busybox_07",
+	  "busybox_08",
+	  "busybox_09",
+	  "busybox_10",
+	  "busybox_11",
+	  "busybox_12",
+	  "busybox_13",
+	  "busybox_14",
+	  "busybox_15",
+	  "busybox_16",
+	  "busybox_17",
+	  "busybox_18",
+	  "busybox_19",
+	  "busybox_20",
+	  "busybox_21",
+	  "busybox_22",
+	  "busybox_23",
+	  "busybox_24",
+	  "busybox_25",
+	  "busybox_26",
+	  "busybox_27",
+	  "busybox_28",
+	  "busybox_29",
+	  "busybox_30",
+	  "busybox_31",
+	  "busybox_32",
+	  "busybox_33",
+	  "busybox_34",
+	  "busybox_35",
+	  "busybox_36",
+	  "busybox_37"
+	]
+  },
+  {
+    "Name": "financialservices",
+	"Versions": [
+	  "financialservices_01",
+	  "financialservices_02",
+	  "financialservices_03",
+	  "financialservices_04",
+	  "financialservices_05",
+	  "financialservices_06",
+	  "financialservices_07",
+	  "financialservices_08",
+	  "financialservices_09",
+	  "financialservices_10"
+	]
+  },
+  {
+    "Name": "linux",
+	"Versions": [
+	  "linux"
 	]
   }],
-  "Sequences": 20,
+  "MaxVersions": 40,
   "Runs": 5,
   "Timeout": 6000
 }

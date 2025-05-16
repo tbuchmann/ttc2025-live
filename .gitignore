@@ -16,12 +16,13 @@
 **/.Rhistory
 **/.RData
 **/.vscode/
+**/.vs/
+**/bin/
+**/launchSettings.json
 output/output*.csv
 .pydevproject
 deps/
 diagrams/
 results/
 __pycache__/
-solutions/NMF.sln
 solutions/.vs/
-changes/1024/
