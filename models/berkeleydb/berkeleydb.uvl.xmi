@@ -1,0 +1,320 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<uvl:FeatureModel xmi:version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xmi="http://www.omg.org/XMI" xmlns:uvl="https://transformationtoolcontest.github.io/uvl">
+  <constraints xsi:type="uvl:OrConstraint" xmi:id="$1">
+    <right xsi:type="uvl:OrConstraint" xmi:id="$2">
+      <right xsi:type="uvl:OrConstraint" xmi:id="$3">
+        <right xsi:type="uvl:ImpliesConstraint" xmi:id="$4">
+          <consequence xsi:type="uvl:FeatureConstraint" feature="$5" xmi:id="$6" />
+          <given xsi:type="uvl:FeatureConstraint" feature="$7" xmi:id="$8" />
+        </right>
+        <left xsi:type="uvl:FeatureConstraint" feature="$9" xmi:id="$10" />
+      </right>
+      <left xsi:type="uvl:FeatureConstraint" feature="$11" xmi:id="$12" />
+    </right>
+    <left xsi:type="uvl:FeatureConstraint" feature="$13" xmi:id="$14" />
+  </constraints>
+  <constraints xsi:type="uvl:ImpliesConstraint" xmi:id="$15">
+    <consequence xsi:type="uvl:FeatureConstraint" feature="$16" xmi:id="$17" />
+    <given xsi:type="uvl:FeatureConstraint" feature="$18" xmi:id="$19" />
+  </constraints>
+  <constraints xsi:type="uvl:ImpliesConstraint" xmi:id="$20">
+    <consequence xsi:type="uvl:FeatureConstraint" feature="$21" xmi:id="$22" />
+    <given xsi:type="uvl:FeatureConstraint" feature="$23" xmi:id="$24" />
+  </constraints>
+  <constraints xsi:type="uvl:ImpliesConstraint" xmi:id="$25">
+    <consequence xsi:type="uvl:FeatureConstraint" feature="$26" xmi:id="$27" />
+    <given xsi:type="uvl:FeatureConstraint" feature="$28" xmi:id="$29" />
+  </constraints>
+  <constraints xsi:type="uvl:ImpliesConstraint" xmi:id="$30">
+    <consequence xsi:type="uvl:AndConstraint" xmi:id="$31">
+      <right xsi:type="uvl:AndConstraint" xmi:id="$32">
+        <right xsi:type="uvl:AndConstraint" xmi:id="$33">
+          <right xsi:type="uvl:FeatureConstraint" feature="$5" xmi:id="$34" />
+          <left xsi:type="uvl:FeatureConstraint" feature="$21" xmi:id="$35" />
+        </right>
+        <left xsi:type="uvl:FeatureConstraint" feature="$13" xmi:id="$36" />
+      </right>
+      <left xsi:type="uvl:FeatureConstraint" feature="$37" xmi:id="$38" />
+    </consequence>
+    <given xsi:type="uvl:FeatureConstraint" feature="$39" xmi:id="$40" />
+  </constraints>
+  <constraints xsi:type="uvl:ImpliesConstraint" xmi:id="$41">
+    <consequence xsi:type="uvl:AndConstraint" xmi:id="$42">
+      <right xsi:type="uvl:AndConstraint" xmi:id="$43">
+        <right xsi:type="uvl:AndConstraint" xmi:id="$44">
+          <right xsi:type="uvl:AndConstraint" xmi:id="$45">
+            <right xsi:type="uvl:AndConstraint" xmi:id="$46">
+              <right xsi:type="uvl:AndConstraint" xmi:id="$47">
+                <right xsi:type="uvl:AndConstraint" xmi:id="$48">
+                  <right xsi:type="uvl:AndConstraint" xmi:id="$49">
+                    <right xsi:type="uvl:AndConstraint" xmi:id="$50">
+                      <right xsi:type="uvl:AndConstraint" xmi:id="$51">
+                        <right xsi:type="uvl:AndConstraint" xmi:id="$52">
+                          <right xsi:type="uvl:FeatureConstraint" feature="$53" xmi:id="$54" />
+                          <left xsi:type="uvl:FeatureConstraint" feature="$55" xmi:id="$56" />
+                        </right>
+                        <left xsi:type="uvl:FeatureConstraint" feature="$57" xmi:id="$58" />
+                      </right>
+                      <left xsi:type="uvl:FeatureConstraint" feature="$16" xmi:id="$59" />
+                    </right>
+                    <left xsi:type="uvl:FeatureConstraint" feature="$5" xmi:id="$60" />
+                  </right>
+                  <left xsi:type="uvl:FeatureConstraint" feature="$21" xmi:id="$61" />
+                </right>
+                <left xsi:type="uvl:FeatureConstraint" feature="$62" xmi:id="$63" />
+              </right>
+              <left xsi:type="uvl:FeatureConstraint" feature="$64" xmi:id="$65" />
+            </right>
+            <left xsi:type="uvl:FeatureConstraint" feature="$13" xmi:id="$66" />
+          </right>
+          <left xsi:type="uvl:FeatureConstraint" feature="$39" xmi:id="$67" />
+        </right>
+        <left xsi:type="uvl:FeatureConstraint" feature="$18" xmi:id="$68" />
+      </right>
+      <left xsi:type="uvl:FeatureConstraint" feature="$37" xmi:id="$69" />
+    </consequence>
+    <given xsi:type="uvl:FeatureConstraint" feature="$70" xmi:id="$71" />
+  </constraints>
+  <constraints xsi:type="uvl:ImpliesConstraint" xmi:id="$72">
+    <consequence xsi:type="uvl:FeatureConstraint" feature="$73" xmi:id="$74" />
+    <given xsi:type="uvl:FeatureConstraint" feature="$75" xmi:id="$76" />
+  </constraints>
+  <constraints xsi:type="uvl:ImpliesConstraint" xmi:id="$77">
+    <consequence xsi:type="uvl:AndConstraint" xmi:id="$78">
+      <right xsi:type="uvl:AndConstraint" xmi:id="$79">
+        <right xsi:type="uvl:FeatureConstraint" feature="$21" xmi:id="$80" />
+        <left xsi:type="uvl:FeatureConstraint" feature="$13" xmi:id="$81" />
+      </right>
+      <left xsi:type="uvl:FeatureConstraint" feature="$37" xmi:id="$82" />
+    </consequence>
+    <given xsi:type="uvl:FeatureConstraint" feature="$83" xmi:id="$84" />
+  </constraints>
+  <constraints xsi:type="uvl:ImpliesConstraint" xmi:id="$85">
+    <consequence xsi:type="uvl:AndConstraint" xmi:id="$86">
+      <right xsi:type="uvl:FeatureConstraint" feature="$5" xmi:id="$87" />
+      <left xsi:type="uvl:FeatureConstraint" feature="$88" xmi:id="$89" />
+    </consequence>
+    <given xsi:type="uvl:FeatureConstraint" feature="$90" xmi:id="$91" />
+  </constraints>
+  <constraints xsi:type="uvl:OrConstraint" xmi:id="$92">
+    <right xsi:type="uvl:ImpliesConstraint" xmi:id="$93">
+      <consequence xsi:type="uvl:FeatureConstraint" feature="$94" xmi:id="$95" />
+      <given xsi:type="uvl:FeatureConstraint" feature="$96" xmi:id="$97" />
+    </right>
+    <left xsi:type="uvl:FeatureConstraint" feature="$98" xmi:id="$99" />
+  </constraints>
+  <constraints xsi:type="uvl:ImpliesConstraint" xmi:id="$100">
+    <consequence xsi:type="uvl:AndConstraint" xmi:id="$101">
+      <right xsi:type="uvl:FeatureConstraint" feature="$70" xmi:id="$102" />
+      <left xsi:type="uvl:FeatureConstraint" feature="$13" xmi:id="$103" />
+    </consequence>
+    <given xsi:type="uvl:FeatureConstraint" feature="$5" xmi:id="$104" />
+  </constraints>
+  <constraints xsi:type="uvl:OrConstraint" xmi:id="$105">
+    <right xsi:type="uvl:ImpliesConstraint" xmi:id="$106">
+      <consequence xsi:type="uvl:FeatureConstraint" feature="$37" xmi:id="$107" />
+      <given xsi:type="uvl:FeatureConstraint" feature="$108" xmi:id="$109" />
+    </right>
+    <left xsi:type="uvl:FeatureConstraint" feature="$16" xmi:id="$110" />
+  </constraints>
+  <constraints xsi:type="uvl:ImpliesConstraint" xmi:id="$111">
+    <consequence xsi:type="uvl:FeatureConstraint" feature="$13" xmi:id="$112" />
+    <given xsi:type="uvl:FeatureConstraint" feature="$113" xmi:id="$114" />
+  </constraints>
+  <constraints xsi:type="uvl:ImpliesConstraint" xmi:id="$115">
+    <consequence xsi:type="uvl:FeatureConstraint" feature="$62" xmi:id="$116" />
+    <given xsi:type="uvl:FeatureConstraint" feature="$117" xmi:id="$118" />
+  </constraints>
+  <constraints xsi:type="uvl:ImpliesConstraint" xmi:id="$119">
+    <consequence xsi:type="uvl:FeatureConstraint" feature="$21" xmi:id="$120" />
+    <given xsi:type="uvl:FeatureConstraint" feature="$121" xmi:id="$122" />
+  </constraints>
+  <constraints xsi:type="uvl:ImpliesConstraint" xmi:id="$123">
+    <consequence xsi:type="uvl:FeatureConstraint" feature="$94" xmi:id="$124" />
+    <given xsi:type="uvl:FeatureConstraint" feature="$108" xmi:id="$125" />
+  </constraints>
+  <constraints xsi:type="uvl:ImpliesConstraint" xmi:id="$126">
+    <consequence xsi:type="uvl:FeatureConstraint" feature="$57" xmi:id="$127" />
+    <given xsi:type="uvl:FeatureConstraint" feature="$128" xmi:id="$129" />
+  </constraints>
+  <constraints xsi:type="uvl:ImpliesConstraint" xmi:id="$130">
+    <consequence xsi:type="uvl:AndConstraint" xmi:id="$131">
+      <right xsi:type="uvl:AndConstraint" xmi:id="$132">
+        <right xsi:type="uvl:FeatureConstraint" feature="$55" xmi:id="$133" />
+        <left xsi:type="uvl:FeatureConstraint" feature="$39" xmi:id="$134" />
+      </right>
+      <left xsi:type="uvl:FeatureConstraint" feature="$37" xmi:id="$135" />
+    </consequence>
+    <given xsi:type="uvl:FeatureConstraint" feature="$94" xmi:id="$136" />
+  </constraints>
+  <constraints xsi:type="uvl:ImpliesConstraint" xmi:id="$137">
+    <consequence xsi:type="uvl:FeatureConstraint" feature="$39" xmi:id="$138" />
+    <given xsi:type="uvl:FeatureConstraint" feature="$55" xmi:id="$139" />
+  </constraints>
+  <constraints xsi:type="uvl:ImpliesConstraint" xmi:id="$140">
+    <consequence xsi:type="uvl:AndConstraint" xmi:id="$141">
+      <right xsi:type="uvl:FeatureConstraint" feature="$57" xmi:id="$142" />
+      <left xsi:type="uvl:FeatureConstraint" feature="$21" xmi:id="$143" />
+    </consequence>
+    <given xsi:type="uvl:FeatureConstraint" feature="$53" xmi:id="$144" />
+  </constraints>
+  <features isAbstract="True" name="&quot;BerkeleyDb&quot;" xmi:id="$145">
+    <groups xsi:type="uvl:OptionalFeatureGroup" xmi:id="$146">
+      <features isAbstract="True" name="&quot;BerkeleyDB&quot;" xmi:id="$147">
+        <groups xsi:type="uvl:MandatoryFeatureGroup" xmi:id="$148">
+          <features isAbstract="True" name="&quot;FPersistency&quot;" xmi:id="$149">
+            <groups xsi:type="uvl:OptionalFeatureGroup" xmi:id="$150">
+              <features isAbstract="True" name="&quot;Persistency&quot;" xmi:id="$151">
+                <groups xsi:type="uvl:MandatoryFeatureGroup" xmi:id="$152">
+                  <features isAbstract="True" name="&quot;FIOFeature&quot;" xmi:id="$153">
+                    <groups xsi:type="uvl:AlternativeFeatureGroup" xmi:id="$154">
+                      <features isAbstract="True" name="&quot;NIO&quot;" xmi:id="$155">
+                        <groups xsi:type="uvl:MandatoryFeatureGroup" xmi:id="$156">
+                          <features isAbstract="True" name="&quot;FNIOType&quot;" xmi:id="$157">
+                            <groups xsi:type="uvl:AlternativeFeatureGroup" xmi:id="$158">
+                              <features isAbstract="False" name="featureNIO" xmi:id="$159" />
+                              <features isAbstract="False" name="featureChunkedNIO" xmi:id="$160" />
+                            </groups>
+                          </features>
+                        </groups>
+                        <groups xsi:type="uvl:OptionalFeatureGroup" xmi:id="$161">
+                          <features isAbstract="False" name="featureDirectNIO" xmi:id="$162" />
+                        </groups>
+                      </features>
+                      <features isAbstract="True" name="&quot;IO&quot;" xmi:id="$163">
+                        <groups xsi:type="uvl:MandatoryFeatureGroup" xmi:id="$164">
+                          <features isAbstract="False" name="featureIO" xmi:id="$165" />
+                        </groups>
+                        <groups xsi:type="uvl:OptionalFeatureGroup" xmi:id="$166">
+                          <features isAbstract="False" name="featureSynchronizedIO" xmi:id="$167" />
+                        </groups>
+                      </features>
+                    </groups>
+                  </features>
+                </groups>
+                <groups xsi:type="uvl:OptionalFeatureGroup" xmi:id="$168">
+                  <features isAbstract="True" name="&quot;FPersistencyFeatures&quot;" xmi:id="$169">
+                    <groups xsi:type="uvl:OrFeatureGroup" xmi:id="$170">
+                      <features isAbstract="False" name="featureChecksum" xmi:id="$88" />
+                      <features isAbstract="False" name="featureFileHandleCache" xmi:id="$64" />
+                      <features isAbstract="False" name="featureHandleFullDiscError" xmi:id="$171" />
+                      <features isAbstract="False" name="featureEnvironmentLock" xmi:id="$73" />
+                      <features isAbstract="True" name="&quot;Checkpointer&quot;" xmi:id="$172">
+                        <groups xsi:type="uvl:OptionalFeatureGroup" xmi:id="$173">
+                          <features isAbstract="False" name="featureCustomizableCheckpointerTime" xmi:id="$26" />
+                          <features isAbstract="False" name="featureCustomizableCheckpointerBytes" xmi:id="$28" />
+                          <features isAbstract="False" name="featureCheckpointerDaemon" xmi:id="$174" />
+                        </groups>
+                      </features>
+                      <features isAbstract="True" name="&quot;Cleaner&quot;" xmi:id="$175">
+                        <groups xsi:type="uvl:OptionalFeatureGroup" xmi:id="$176">
+                          <features isAbstract="False" name="featureLookAheadCache" xmi:id="$9" />
+                          <features isAbstract="False" name="featureCleanerDaemon" xmi:id="$177" />
+                        </groups>
+                      </features>
+                    </groups>
+                  </features>
+                </groups>
+              </features>
+            </groups>
+          </features>
+          <features isAbstract="True" name="&quot;FBtree&quot;" xmi:id="$178">
+            <groups xsi:type="uvl:OptionalFeatureGroup" xmi:id="$179">
+              <features isAbstract="True" name="&quot;BTree&quot;" xmi:id="$180">
+                <groups xsi:type="uvl:OptionalFeatureGroup" xmi:id="$181">
+                  <features isAbstract="False" name="featureVerifier" xmi:id="$53" />
+                  <features isAbstract="False" name="featureTreeVisitor" xmi:id="$57" />
+                  <features isAbstract="False" name="featureINCompressor" xmi:id="$21" />
+                  <features isAbstract="True" name="&quot;FEvictor&quot;" xmi:id="$182">
+                    <groups xsi:type="uvl:OptionalFeatureGroup" xmi:id="$183">
+                      <features isAbstract="True" name="&quot;Evictor&quot;" xmi:id="$184">
+                        <groups xsi:type="uvl:MandatoryFeatureGroup" xmi:id="$185">
+                          <features isAbstract="False" name="featureEvictor" xmi:id="$13" />
+                        </groups>
+                        <groups xsi:type="uvl:OptionalFeatureGroup" xmi:id="$186">
+                          <features isAbstract="False" name="featureCriticalEviction" xmi:id="$23" />
+                          <features isAbstract="False" name="featureEvictorDaemon" xmi:id="$11" />
+                        </groups>
+                      </features>
+                    </groups>
+                  </features>
+                </groups>
+              </features>
+            </groups>
+          </features>
+          <features isAbstract="False" name="BASE" xmi:id="$187" />
+        </groups>
+        <groups xsi:type="uvl:OptionalFeatureGroup" xmi:id="$188">
+          <features isAbstract="True" name="&quot;FLogging&quot;" xmi:id="$189">
+            <groups xsi:type="uvl:OptionalFeatureGroup" xmi:id="$190">
+              <features isAbstract="True" name="&quot;Logging&quot;" xmi:id="$191">
+                <groups xsi:type="uvl:MandatoryFeatureGroup" xmi:id="$192">
+                  <features isAbstract="False" name="featureLoggingBase" xmi:id="$98" />
+                </groups>
+                <groups xsi:type="uvl:OptionalFeatureGroup" xmi:id="$193">
+                  <features isAbstract="False" name="featureLoggingFile" xmi:id="$194" />
+                  <features isAbstract="False" name="featureLoggingConsole" xmi:id="$195" />
+                  <features isAbstract="False" name="featureLoggingDbLog" xmi:id="$196" />
+                  <features isAbstract="False" name="featureLoggingFinest" xmi:id="$96" />
+                  <features isAbstract="False" name="featureLoggingFiner" xmi:id="$197" />
+                  <features isAbstract="False" name="featureLoggingFine" xmi:id="$83" />
+                  <features isAbstract="False" name="featureLoggingInfo" xmi:id="$90" />
+                  <features isAbstract="False" name="featureLoggingConfig" xmi:id="$198" />
+                  <features isAbstract="False" name="featureLoggingSevere" xmi:id="$75" />
+                </groups>
+              </features>
+            </groups>
+          </features>
+          <features isAbstract="True" name="&quot;FStatistics&quot;" xmi:id="$199">
+            <groups xsi:type="uvl:OptionalFeatureGroup" xmi:id="$200">
+              <features isAbstract="True" name="&quot;Statistics&quot;" xmi:id="$201">
+                <groups xsi:type="uvl:MandatoryFeatureGroup" xmi:id="$202">
+                  <features isAbstract="True" name="&quot;FStatisticsFeatures&quot;" xmi:id="$203">
+                    <groups xsi:type="uvl:OrFeatureGroup" xmi:id="$204">
+                      <features isAbstract="True" name="&quot;EnvStats&quot;" xmi:id="$205">
+                        <groups xsi:type="uvl:MandatoryFeatureGroup" xmi:id="$206">
+                          <features isAbstract="False" name="featureStatisticsEnvBase" xmi:id="$207" />
+                        </groups>
+                        <groups xsi:type="uvl:OptionalFeatureGroup" xmi:id="$208">
+                          <features isAbstract="False" name="featureStatisticsEnvLog" xmi:id="$209" />
+                          <features isAbstract="False" name="featureStatisticsEnvINCompressor" xmi:id="$121" />
+                          <features isAbstract="False" name="featureStatisticsEnvFSync" xmi:id="$117" />
+                          <features isAbstract="False" name="featureStatisticsEnvEvictor" xmi:id="$113" />
+                          <features isAbstract="False" name="featureStatisticsEnvCleaner" xmi:id="$210" />
+                          <features isAbstract="False" name="featureStatisticsEnvCheckpointer" xmi:id="$211" />
+                          <features isAbstract="False" name="featureStatisticsEnvCaching" xmi:id="$7" />
+                        </groups>
+                      </features>
+                      <features isAbstract="False" name="featureStatisticsDatabase" xmi:id="$128" />
+                      <features isAbstract="False" name="featureStatisticsLock" xmi:id="$16" />
+                      <features isAbstract="False" name="featureStatisticsPreload" xmi:id="$212" />
+                      <features isAbstract="False" name="featureStatisticsSequence" xmi:id="$213" />
+                      <features isAbstract="False" name="featureStatisticsTransaction" xmi:id="$108" />
+                    </groups>
+                  </features>
+                  <features isAbstract="False" name="featureStatisticsBase" xmi:id="$214" />
+                </groups>
+              </features>
+            </groups>
+          </features>
+          <features isAbstract="False" name="featureMemoryBudget" xmi:id="$5" />
+          <features isAbstract="True" name="&quot;FConcurrency&quot;" xmi:id="$215">
+            <groups xsi:type="uvl:OrFeatureGroup" xmi:id="$216">
+              <features isAbstract="False" name="featureLatch" xmi:id="$70" />
+              <features isAbstract="False" name="featureFSync" xmi:id="$62" />
+              <features isAbstract="False" name="featureTransaction" xmi:id="$94" />
+              <features isAbstract="False" name="dummyFeatureLocking" xmi:id="$37" />
+              <features isAbstract="False" name="featureCheckLeaks" xmi:id="$18" />
+            </groups>
+          </features>
+          <features isAbstract="True" name="&quot;FDbOperation&quot;" xmi:id="$217">
+            <groups xsi:type="uvl:OrFeatureGroup" xmi:id="$218">
+              <features isAbstract="False" name="featureDeleteDb" xmi:id="$39" />
+              <features isAbstract="False" name="featureTruncateDb" xmi:id="$55" />
+            </groups>
+          </features>
+        </groups>
+      </features>
+    </groups>
+  </features>
+</uvl:FeatureModel>
