@@ -21,11 +21,8 @@ namespace NMFSolution.Verbs
 
         public Func<Model> ComputeChanges(string modelPath, string model, int iteration, string targetPath)
         {
-            return () =>
-            {
-                Load(modelPath, model);
-                return Initial(modelPath, model, targetPath);
-            };
+            Load(modelPath, model);
+            return () => Initial(modelPath, model, targetPath);
         }
 
         public Model Initial(string modelPath, string model, string targetPath)
@@ -42,7 +39,7 @@ namespace NMFSolution.Verbs
 
         public void Load(string modelPath, string model)
         {
-            Console.Error.WriteLine(modelPath);
+            Console.Error.WriteLine("Loading " + modelPath);
             var parser = _grammar.CreateParser();
             _loadedFeatureModel = parser.Initialize(File.ReadAllLines(modelPath)) as FeatureModel;
         }
