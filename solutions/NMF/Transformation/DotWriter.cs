@@ -26,21 +26,26 @@ namespace NMFSolution.Transformation
             }
             if (featureModel.Constraints.Any())
             {
-                writer.WriteLine();
-                writer.WriteLine();
-                writer.WriteLine("subgraph cluster_constraints{");
-                writer.WriteLine("    label=\"Constraints\" color=\"white\" fontcolor=\"white\"");
-                writer.WriteLine("    constraints [shape=\"box\" color=\"#1e1e1e\" label=<<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" cellborder=\"0\">");
-                writer.Write("    ");
-                foreach (var constraint in featureModel.Constraints)
-                {
-                    writer.Write("    <tr><td align=\"left\">");
-                    WriteConstraint(constraint, writer);
-                    writer.WriteLine("</td></tr>");
-                }
-                writer.WriteLine("</table>>]");
-                writer.WriteLine("}");
+                WriteConstraints(featureModel, writer);
             }
+            writer.WriteLine("}");
+        }
+
+        private static void WriteConstraints(IFeatureModel featureModel, TextWriter writer)
+        {
+            writer.WriteLine();
+            writer.WriteLine();
+            writer.WriteLine("subgraph cluster_constraints{");
+            writer.WriteLine("    label=\"Constraints\" color=\"white\" fontcolor=\"white\"");
+            writer.WriteLine("    constraints [shape=\"box\" color=\"#1e1e1e\" label=<<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" cellborder=\"0\">");
+            writer.Write("    ");
+            foreach (var constraint in featureModel.Constraints)
+            {
+                writer.Write("    <tr><td align=\"left\">");
+                WriteConstraint(constraint, writer);
+                writer.WriteLine("</td></tr>");
+            }
+            writer.WriteLine("</table>>]");
             writer.WriteLine("}");
         }
 
