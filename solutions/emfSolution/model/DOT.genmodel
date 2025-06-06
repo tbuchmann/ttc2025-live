@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/emfSolution/src/main/emf-gen" editDirectory="/emfSolution/src/main/emf-gen"
+    editorDirectory="/emfSolution/src/main/emf-gen" modelPluginID="emfSolution" modelName="DOT"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" testsDirectory="/emfSolution/src/main/emf-gen"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="17.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>DOT.ecore</foreignModel>
+  <genPackages prefix="PrimitiveTypes" disposableProviderFactory="true" ecorePackage="DOT.ecore#/0">
+    <genDataTypes ecoreDataType="DOT.ecore#/0/Boolean"/>
+    <genDataTypes ecoreDataType="DOT.ecore#/0/Integer"/>
+    <genDataTypes ecoreDataType="DOT.ecore#/0/String"/>
+    <genDataTypes ecoreDataType="DOT.ecore#/0/Double"/>
+  </genPackages>
+  <genPackages prefix="DOT" disposableProviderFactory="true" ecorePackage="DOT.ecore#/1">
+    <genClasses image="false" ecoreClass="DOT.ecore#/1/Label">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference DOT.ecore#/1/Label/element"/>
+    </genClasses>
+    <genClasses ecoreClass="DOT.ecore#/1/SimpleLabel">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DOT.ecore#/1/SimpleLabel/content"/>
+    </genClasses>
+    <genClasses ecoreClass="DOT.ecore#/1/ComplexLabel">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DOT.ecore#/1/ComplexLabel/compartments"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="DOT.ecore#/1/Compartment">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference DOT.ecore#/1/Compartment/complexLabel"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DOT.ecore#/1/Compartment/compartments"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DOT.ecore#/1/Compartment/anchor"/>
+    </genClasses>
+    <genClasses ecoreClass="DOT.ecore#/1/VerticalCompartment"/>
+    <genClasses ecoreClass="DOT.ecore#/1/HorizontalCompartment"/>
+    <genClasses ecoreClass="DOT.ecore#/1/SimpleCompartment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DOT.ecore#/1/SimpleCompartment/content"/>
+    </genClasses>
+    <genClasses ecoreClass="DOT.ecore#/1/Anchor">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DOT.ecore#/1/Anchor/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DOT.ecore#/1/Anchor/source"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="DOT.ecore#/1/GraphElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DOT.ecore#/1/GraphElement/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DOT.ecore#/1/GraphElement/label"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DOT.ecore#/1/GraphElement/style"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DOT.ecore#/1/GraphElement/color"/>
+    </genClasses>
+    <genClasses ecoreClass="DOT.ecore#/1/Graph">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DOT.ecore#/1/Graph/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DOT.ecore#/1/Graph/rankDir"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DOT.ecore#/1/Graph/labeljust"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DOT.ecore#/1/Graph/labelloc"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DOT.ecore#/1/Graph/concentrate"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DOT.ecore#/1/Graph/nodes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DOT.ecore#/1/Graph/boundingBox"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DOT.ecore#/1/Graph/compound"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DOT.ecore#/1/Graph/layers"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DOT.ecore#/1/Graph/nodeSeparation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DOT.ecore#/1/Graph/ordering"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DOT.ecore#/1/Graph/size"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DOT.ecore#/1/Graph/ratio"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DOT.ecore#/1/Graph/center"/>
+    </genClasses>
+    <genClasses ecoreClass="DOT.ecore#/1/Layer">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DOT.ecore#/1/Layer/nodes"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DOT.ecore#/1/Layer/arcs"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference DOT.ecore#/1/Layer/graph"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DOT.ecore#/1/Layer/layerSeparator"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="DOT.ecore#/1/Nodelike">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference DOT.ecore#/1/Nodelike/owner"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DOT.ecore#/1/Nodelike/refers"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DOT.ecore#/1/Nodelike/referredBy"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference DOT.ecore#/1/Nodelike/graph"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DOT.ecore#/1/Nodelike/layers"/>
+    </genClasses>
+    <genClasses ecoreClass="DOT.ecore#/1/SubGraph">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DOT.ecore#/1/SubGraph/nodes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DOT.ecore#/1/SubGraph/labelloc"/>
+    </genClasses>
+    <genClasses ecoreClass="DOT.ecore#/1/Node">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DOT.ecore#/1/Node/fixedSize"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DOT.ecore#/1/Node/fontname"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DOT.ecore#/1/Node/fontsize"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DOT.ecore#/1/Node/height"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DOT.ecore#/1/Node/width"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DOT.ecore#/1/Node/shape"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="DOT.ecore#/1/Arc">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DOT.ecore#/1/Arc/fromNode"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DOT.ecore#/1/Arc/toNode"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DOT.ecore#/1/Arc/layers"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DOT.ecore#/1/Arc/constraint"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DOT.ecore#/1/Arc/group"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DOT.ecore#/1/Arc/minlen"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DOT.ecore#/1/Arc/sameHead"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DOT.ecore#/1/Arc/sameTail"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DOT.ecore#/1/Arc/lhead"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DOT.ecore#/1/Arc/ltail"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DOT.ecore#/1/Arc/decorate"/>
+    </genClasses>
+    <genClasses ecoreClass="DOT.ecore#/1/DirectedArc">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DOT.ecore#/1/DirectedArc/arrowHead"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DOT.ecore#/1/DirectedArc/headlabel"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DOT.ecore#/1/DirectedArc/taillabel"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DOT.ecore#/1/DirectedArc/arrowTail"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DOT.ecore#/1/DirectedArc/tail_lp"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DOT.ecore#/1/DirectedArc/head_lp"/>
+    </genClasses>
+    <genClasses ecoreClass="DOT.ecore#/1/UndirectedArc"/>
+    <genClasses image="false" ecoreClass="DOT.ecore#/1/Shape">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DOT.ecore#/1/Shape/width"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DOT.ecore#/1/Shape/height"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DOT.ecore#/1/Shape/peripheries"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="DOT.ecore#/1/NodeShape"/>
+    <genClasses ecoreClass="DOT.ecore#/1/SimpleNodeShape"/>
+    <genClasses ecoreClass="DOT.ecore#/1/PointNodeShape"/>
+    <genClasses image="false" ecoreClass="DOT.ecore#/1/ComplexNodeShape"/>
+    <genClasses ecoreClass="DOT.ecore#/1/PolygonNodeShape">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DOT.ecore#/1/PolygonNodeShape/sides"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DOT.ecore#/1/PolygonNodeShape/skew"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DOT.ecore#/1/PolygonNodeShape/distortion"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DOT.ecore#/1/PolygonNodeShape/isRegular"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DOT.ecore#/1/PolygonNodeShape/orientation"/>
+    </genClasses>
+    <genClasses ecoreClass="DOT.ecore#/1/MNodeShape">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DOT.ecore#/1/MNodeShape/toplabel"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DOT.ecore#/1/MNodeShape/bottomlabel"/>
+    </genClasses>
+    <genClasses ecoreClass="DOT.ecore#/1/RecordNodeShape"/>
+    <genClasses ecoreClass="DOT.ecore#/1/ArrowShape">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DOT.ecore#/1/ArrowShape/clipping"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DOT.ecore#/1/ArrowShape/isPlain"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DOT.ecore#/1/ArrowShape/size"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
