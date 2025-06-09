@@ -1,20 +1,32 @@
 package ttc2025;
 
 import DOT.Graph;
+import UniversalVariability.FeatureModel;
+import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.ecore.resource.ResourceSet;
+import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
+import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 
 import java.io.FileOutputStream;
 import java.io.OutputStreamWriter;
 import java.util.function.Supplier;
 
 public class SolutionTemplate implements ISolution {
+
+    private ResourceSet resourceSet;
+    private FeatureModel loadedFeatureModel;
+
     @Override
     public void initialize() throws Exception {
-        // does nothing
+        resourceSet = new ResourceSetImpl();
+        resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put("xmi", new XMIResourceFactoryImpl());
     }
 
     @Override
     public void load(String modelPath, String model) {
         // loads the initial model path
+        var rs = resourceSet.getResource(URI.createURI(modelPath + ".xmi"), true);
+        loadedFeatureModel = (FeatureModel) rs.getContents().get(0);
     }
 
     @Override
