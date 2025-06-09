@@ -17,6 +17,7 @@
 **/.RData
 **/.vscode/
 **/.vs/
+**/.idea/
 **/bin/
 **/launchSettings.json
 output/output*.csv
