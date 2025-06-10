@@ -1,0 +1,42 @@
+
+The transformation from the UVL to Dot is inspired by thetransformation from UVL to Dot that is included in the Visual Studio Code extension for UVL. In the scope of the contest, we set the following
+properties for the entire directed graph:
+• The rankdir is set to TB.
+• The newrank is set to true.
+• The bgcolor is set to # 1e1e1e.
+• The color of edges is set to white.
+• The style of nodes is set to filled, the fontcolor is white and
+the fontname is Arial Unicode MS, Arial.
+
+The name of the directed graph is the name of the UVL file
+Then, for each feature of the feature model, the graph contains
+a node statement defining a node for this feature. The nodes have
+the following properties:
+• The fillcolor is #ABACEA.
+• The shape is box.
+• The tooltip reflects the cardinality of the feature, by default
+it is Cardinality: None.
+Feature groups translate to edges as follows:
+
+• Ifa feature is contained in an alternative group of its parent
+feature, the Dot file shall have an edge from the parent
+feature to the child feature with an empty arrow head ( none)
+and a hollow arrow tail (odot).
+• If a feature is contained in an or group of its parent feature,
+the Dot file shall have an edge from the parent feature to
+the child feature with an empty arrow head ( none) and a
+filled arrow tail dot).
+• If a feature is contained in a mandatory group of its parent
+feature, the Dot file shall have an edge from the parent
+feature to the child feature with a filled arrow head (dot)
+and an empty arrow tail ( none).
+• If a feature is contained in an optional group of its parent
+feature, the Dot file shall have an edge from the parent
+feature to the child feature with a hollow arrow head (odot)
+and an empty arrow tail ( none).
+The constraints should be rendered as an HTML table where
+each constraint is a separate row with a single column. Although
+the Dot table contains the constraints in exactly the same syntax as
+UVL, transformations should not simply copy the constraints but
+render them from the model.
+
