@@ -2,7 +2,7 @@
 
 ## Case description
 
-The `docs/2025_TTC_Live.pdf` file contains the [case description](https://github.com/TransformationToolContest/ttc2025-live/raw/main/docs/2025_TTC_Live.pdf).
+The `docs/UVL_to_Dot_TTC_2025_Live_Contest.pdf` file contains the [case description](https://github.com/TransformationToolContest/ttc2025-live/blob/main/docs/UVL_to_Dot_TTC_2025_Live_Contest.pdf).
 
 ## Prerequisites
 
@@ -21,7 +21,6 @@ Add your prerequisites here!
 The `scripts` directory contains the `run.py` script which is used for the following purposes:
 * `run.py -b` -- builds the projects
 * `run.py -b -s` -- builds the projects without testing
-* `run.py -g` -- generates the instance models
 * `run.py -m` -- runs the benchmark
 * `run.py -v` -- visualizes the results of the latest benchmark
 
