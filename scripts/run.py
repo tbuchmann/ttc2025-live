@@ -84,27 +84,23 @@ def set_working_directory(*path):
     dir = os.path.join(BASE_DIRECTORY, *path)
     os.chdir(dir)
 
-def _visualize(scenario, times, metric, unit, scale):
+def _visualize(times, metric, unit, scale):
     import pandas as pd
     import numpy as np
-    from matplotlib.ticker import ScalarFormatter
     import matplotlib.pyplot as plt
     values = times[times.MetricName==metric]
     values['Values'] = values.MetricValue * scale
-    sizes=np.unique(values.Model)
+    models=np.unique(values.Model)
     for phase in np.unique(values.PhaseName):
-        print("Printing diagram for scenario = " + scenario + ", phase = " + phase)
+        print("Printing diagram for phase = " + phase)
         phasedata = values[values.PhaseName==phase]
         results = pd.pivot_table(phasedata, values='Values', index=['Model'],columns=['Tool'])
-        plot = results.plot(logx=True,xticks=sizes)
-        plot.get_xaxis().set_major_formatter(ScalarFormatter())
-        plot.get_xaxis().set_tick_params(which='minor', size=0)
-        plot.get_xaxis().set_tick_params(which='minor', width=0)
+        plot = results.plot()
         label = metric
         if unit is not None:
             label = label + " [" + unit + "]"
         plot.set_ylabel(label)
-        plt.savefig(scenario + "_" + phase + ".pdf")
+        plt.savefig(phase + ".pdf")
 
 def visualize(conf):
     """
@@ -115,9 +111,7 @@ def visualize(conf):
     import pandas as pd
     data = pd.read_csv(os.path.join(BASE_DIRECTORY, 'output', 'output.csv'), sep=';')
     times = data[data.MetricName=='Time']
-    for scenario in conf.Scenarios:
-        timesForScenario = times[times.Scenario==scenario.Name]
-        _visualize(scenario.Name, timesForScenario, 'Time', 'ms', 0.000001)
+    _visualize(times, 'Time', 'ms', 0.000001)
 
 
 if __name__ == "__main__":
